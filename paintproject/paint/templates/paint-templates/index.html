@@ -1,0 +1,9 @@
+{% if the_entire_list %}
+    <ul>
+    {% for color_name in the_entire_list %}
+        <li><a href="/paint/{{color_name.color_name}}/">{{ color_name.color_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No paints are available.</p>
+{% endif %}
